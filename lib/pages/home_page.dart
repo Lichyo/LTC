@@ -1,0 +1,40 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('LTC'),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 10.0,
+            ),
+            child: Icon(
+              Icons.phone,
+              size: 28.0,
+            ),
+          )
+        ],
+      ),
+      body: const Column(
+        children: [
+          Row(
+            children: [
+
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
