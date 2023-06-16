@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "188984025105",
+    "project_id": "longtimecare-bda93",
+    "storage_bucket": "longtimecare-bda93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188984025105:android:5f79591c961bc47b3591b0",
+        "android_client_info": {
+          "package_name": "com.hcl.long_time_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188984025105-ruinr4qgck41g2r942oo8isgiv0vkov6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXS3fyr8YYp_Ie3nPbSnrduoQGk9SS66I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188984025105-ruinr4qgck41g2r942oo8isgiv0vkov6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
