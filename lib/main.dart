@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'package:record/record.dart';
-import 'pages/task_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +15,6 @@ class LTC extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: HomePage(),
-      // home: TaskPage(),
     );
   }
 }
