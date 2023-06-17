@@ -29,6 +29,13 @@
             {
               "client_id": "188984025105-ruinr4qgck41g2r942oo8isgiv0vkov6.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "188984025105-pdhvsvcpae36roe6j4usrg79qa4cbapt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hcl.longTimeCare"
+              }
             }
           ]
         }
