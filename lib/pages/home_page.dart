@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
+import 'package:long_time_care/pages/chat_room_page.dart';
 import 'package:long_time_care/pages/setting_page.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,35 +12,55 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepOrange[100],
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.orange,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.question_answer),
+              title: const Text('家庭聊天室'),
+              onTap: () {
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => const ChatScreen(className: className)));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('設定'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingPage()));
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.deepOrangeAccent,
         title: const Text('LTC'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.symmetric(
+            padding: EdgeInsets.symmetric(
               horizontal: 10.0,
             ),
-            child: IconButton(
-                icon: const Icon(Icons.settings),
-                iconSize: 30,
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const SettingPage()));
-                }
-                // Icons.settings,
-                // ,
-                ),
           )
         ],
       ),
@@ -77,7 +97,9 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Expanded(
-                  child: Button(text: "洗澡", icon: Icons.shower, onTap: () {}),
+                  child: Center(
+                    child: Button(text: "洗澡", icon: Icons.shower, onTap: () {}),
+                  ),
                 ),
                 Expanded(
                   child: Button(text: "廁所", icon: Icons.wc, onTap: () {}),
