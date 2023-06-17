@@ -19,11 +19,11 @@ class RecordButton extends StatelessWidget {
           child: Container(
             width: 100,
             height: 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.deepOrange,
             ),
-            child: Center(
+            child: const Center(
               child: Icon(
                 Icons.mic,
                 size: 40.0,

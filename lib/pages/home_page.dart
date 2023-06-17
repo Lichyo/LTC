@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
 import 'package:long_time_care/pages/chat_room_page.dart';
 import 'package:long_time_care/pages/setting_page.dart';
+import 'package:long_time_care/services/record_api.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +15,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final _recordApi = RecordApi();
+
   @override
   void initState() {
     super.initState();
@@ -109,8 +114,20 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: RecordButton(
-              onTap: () {
-                print("a");
+              onTap: () async {
+                if (await _recordApi.isRecording()) {
+                  _recordApi.stopRecord();
+                  final audio = File(
+                      '/Users/lichyo/long_time_care/lib/assets/audios/users_audio.m4a');
+                  _recordApi.storeAudioToFirebase(
+                      user: 'Lichyo',
+                      audio: audio,
+                      audioName: 'lichyo\s audio');
+                } else {
+                  _recordApi.startRecord(
+                      path:
+                          '/Users/lichyo/long_time_care/lib/assets/audios/users_audio.m4a');
+                }
               },
             ),
           ),
