@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
 import 'package:long_time_care/pages/setting_page.dart';
+import 'package:long_time_care/services/record_api.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -12,6 +13,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final _recordApi = RecordApi();
 
   @override
   void initState() {
@@ -88,7 +91,6 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: RecordButton(
               onTap: () {
-                print("a");
               },
             ),
           ),
