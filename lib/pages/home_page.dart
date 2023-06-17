@@ -22,15 +22,20 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.deepOrangeAccent,
         title: const Text('LTC'),
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 10.0,
             ),
-            child: Icon(
-              Icons.settings,
-              size: 28.0,
-            ),
+            child: IconButton(
+                icon: Icon(Icons.settings),
+                iconSize: 30,
+                onPressed: () {
+                  print("aaa");
+                }
+                // Icons.settings,
+                // ,
+                ),
           )
         ],
       ),
