@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
   final String text;
-  final String icon;
+  final IconData icon;
   final VoidCallback onTap;
   const Button(
       {super.key, required this.text, required this.icon, required this.onTap});
@@ -17,12 +17,18 @@ class Button extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           child: Container(
             padding: const EdgeInsets.all(20),
-            color: Colors.grey[600],
+            color: Colors.orangeAccent[200],
             child: Center(
-              child: Text(
-                text,
-                style: const TextStyle(color: Colors.black),
-              ),
+              child: Column(children: [
+                Icon(
+                  icon,
+                  size: 50,
+                ),
+                Text(
+                  text,
+                  style: const TextStyle(color: Colors.black, fontSize: 30),
+                )
+              ]),
             ),
           ),
         ),
