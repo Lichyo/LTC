@@ -20,11 +20,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepOrange[100],
@@ -33,15 +28,15 @@ class _HomePageState extends State<HomePage> {
         title: const Text('LTC'),
         actions: [
           Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 10.0,
             ),
             child: IconButton(
-                icon: Icon(Icons.settings),
+                icon: const Icon(Icons.settings),
                 iconSize: 30,
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SettingPage()));
+                      MaterialPageRoute(builder: (context) => const SettingPage()));
                 }
                 // Icons.settings,
                 // ,
