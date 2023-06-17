@@ -1,6 +1,6 @@
 import 'package:record/record.dart';
 
-class RecordService {
+class RecordApi {
   final Record record = Record();
 
   void startRecord({path}) async{
