@@ -3,6 +3,7 @@ import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
 import 'package:long_time_care/pages/setting_page.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -11,6 +12,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
+
   @override
   void initState() {
     super.initState();
