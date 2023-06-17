@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
+import 'package:long_time_care/pages/setting_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,7 +32,8 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.settings),
                 iconSize: 30,
                 onPressed: () {
-                  print("aaa");
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SettingPage()));
                 }
                 // Icons.settings,
                 // ,

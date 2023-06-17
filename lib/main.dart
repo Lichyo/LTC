@@ -20,7 +20,7 @@ class LTC extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SettingPage(),
+      home: HomePage(),
     );
   }
 }

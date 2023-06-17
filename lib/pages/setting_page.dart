@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
 import 'package:long_time_care/components/setting_button.dart';
+import 'package:long_time_care/pages/home_page.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -28,15 +29,6 @@ class _SettingPageState extends State<SettingPage> {
             padding: EdgeInsets.symmetric(
               horizontal: 10.0,
             ),
-            child: IconButton(
-                icon: Icon(Icons.settings),
-                iconSize: 30,
-                onPressed: () {
-                  print("aaa");
-                }
-                // Icons.settings,
-                // ,
-                ),
           )
         ],
       ),
