@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class RecordButton extends StatelessWidget {
-  final Function onTapDown;
-  final Function onTapUp;
-  const RecordButton({super.key, required this.onTapUp, required this.onTapDown});
+  final VoidCallback onTap;
+  const RecordButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: GestureDetector(
-        onTapDown: onTapDown(),
-        onTapUp: onTapUp(),
+        onTap: onTap,
         child: Container(
           width: 100,
           height: 100,

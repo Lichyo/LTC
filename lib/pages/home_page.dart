@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:long_time_care/components/button.dart';
 import 'package:long_time_care/components/record_button.dart';
@@ -19,7 +21,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-
   }
 
   @override
@@ -90,7 +91,14 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: RecordButton(
-              onTap: () {
+              onTap: () async{
+                if( await _recordApi.isRecording() ) {
+                  _recordApi.stopRecord();
+                  final audio = File('/Users/lichyo/long_time_care/lib/assets/audios/users_audio.m4a');
+                  _recordApi.storeAudioToFirebase(user: 'Lichyo', audio: audio, audioName: 'lichyo\s audio');
+                } else {
+                  _recordApi.startRecord(path: '/Users/lichyo/long_time_care/lib/assets/audios/users_audio.m4a');
+                }
               },
             ),
           ),

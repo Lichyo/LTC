@@ -2,12 +2,12 @@ import 'package:record/record.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 class RecordApi {
-  final Record record = Record();
+  final Record _record = Record();
   final FirebaseStorage _firebaseStorage = FirebaseStorage.instance;
 
-  void startRecord({path}) async {
-    if (await record.hasPermission()) {
-      await record.start(
+  void startRecord({required path}) async {
+    if (await _record.hasPermission()) {
+      await _record.start(
         path: path,
         encoder: AudioEncoder.aacLc,
         bitRate: 128000,
@@ -15,8 +15,10 @@ class RecordApi {
     }
   }
 
+  Future<bool> isRecording() async => await _record.isRecording();
+
   void stopRecord() {
-    record.stop();
+    _record.stop();
   }
 
   Future<void> storeAudioToFirebase({user, audio, audioName}) async {
